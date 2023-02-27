@@ -30,6 +30,8 @@ def main():
 
     conn.close()
 
+    print("ETL Pipeline Excecuted Successfully")
+
 
 if __name__ == "__main__":
     main()

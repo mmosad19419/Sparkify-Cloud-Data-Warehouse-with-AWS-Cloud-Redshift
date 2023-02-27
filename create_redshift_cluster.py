@@ -37,19 +37,19 @@ print("Get Configuration Parameters Successfully")
 # init aws servicies
 try:
     ec2 = boto3.resource("ec2",
-                         region_name="us-east-1",
+                         region_name="us-west-2",
                          aws_access_key_id=KEY,
                          aws_secret_access_key=SECRET)
     s3 = boto3.resource("s3",
-                        region_name="us-east-1",
+                        region_name="us-west-2",
                         aws_access_key_id=KEY,
                         aws_secret_access_key=SECRET)
     redshift = boto3.client("redshift",
-                            region_name="us-east-1",
+                            region_name="us-west-2",
                             aws_access_key_id=KEY,
                             aws_secret_access_key=SECRET)
     iam = boto3.client("iam",
-                       region_name="us-east-1",
+                       region_name="us-west-2",
                        aws_access_key_id=KEY,
                        aws_secret_access_key=SECRET)
 except Exception as e:
@@ -175,7 +175,7 @@ except Exception as e:
     print(e)
 
 
-# delete the cluster (uncomment to delete the cluster and run the script again)
-redshift.delete_cluster(
-    ClusterIdentifier=DWH_CLUSTER_IDENTIFIER,  SkipFinalClusterSnapshot=True)
-print("1.6 Cluster Deleted Successfully")
+#delete the cluster (uncomment to delete the cluster and run the script again)
+#redshift.delete_cluster(
+    #ClusterIdentifier=DWH_CLUSTER_IDENTIFIER,  SkipFinalClusterSnapshot=True)
+#print("1.6 Cluster Deleted Successfully")
