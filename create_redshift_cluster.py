@@ -176,6 +176,6 @@ except Exception as e:
 
 
 #delete the cluster (uncomment to delete the cluster and run the script again)
-#redshift.delete_cluster(
-    #ClusterIdentifier=DWH_CLUSTER_IDENTIFIER,  SkipFinalClusterSnapshot=True)
-#print("1.6 Cluster Deleted Successfully")
+redshift.delete_cluster(
+    ClusterIdentifier=DWH_CLUSTER_IDENTIFIER,  SkipFinalClusterSnapshot=True)
+print("1.6 Cluster Deleted Successfully")
